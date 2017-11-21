@@ -1,0 +1,18 @@
+<% include partials/header %>
+<h1>Camp Grounds</h1>
+
+<a href="/campgrounds/new">Add a new CampGround</a>
+<%
+if (campgrounds) {
+campgrounds.forEach(function(campground){
+%>
+<div>
+	<h4><%=campground.name%></h4>
+	<img src="<%=campground.image%>" style="width:5em">
+</div>
+<%
+	});
+}
+%>
+
+<% include partials/footer %>
